@@ -1,0 +1,19 @@
+{
+  "name": "nodejs-starter",
+  "version": "1.0.0",
+  "description": "A starter for nodejs applications",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MikeManzi/nodejs-starter.git"
+  },
+  "author": "MANZI Mike",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MikeManzi/nodejs-starter/issues"
+  },
+  "homepage": "https://github.com/MikeManzi/nodejs-starter#readme"
+}
