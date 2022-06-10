@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Name Apis</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Inter;
+        }
+
+        .container {
+            width: 50%;
+            text-align: center;
+            margin: 0 auto;
+            padding: 3%;
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 20px;
+            color: #FFA451;
+        }
+
+        .content {
+            min-height: 80vh;
+        }
+
+        .description {
+            color: #707070;
+            font-size: 15px;
+            padding: 4% 2% 0;
+        }
+
+        .links {
+            text-align: left;
+            margin: 5%;
+        }
+
+        .links_title {
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 4%;
+        }
+
+        .buttons {
+            display: flex;
+            columns: 2;
+            flex-wrap: wrap;
+        }
+
+        .links a {
+            margin: 5px auto;
+        }
+
+        .buttons button {
+            width: 130px;
+
+            overflow-wrap: anywhere;
+            height: 45px;
+            background-color: #FFA451;
+            border: none;
+            border-radius: 11px;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:focus {
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="content">
+            <div class="header">
+                <div class="description">
+                    App Name APIs
+                </div>
+            </div>
+            <div class="links">
+                <div class="links_title">Useful links</div>
+                <div class="buttons">
+                    <a href="#">
+                        <button>Frontend</button>
+                    </a>
+                    <a href="/documentation">
+                        <button>Documentation</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <span>App Name</span>
+        </div>
+    </div>
+</body>
+
+</html>
