@@ -1,9 +1,10 @@
-import express from 'express';
-import cors from 'cors';
-import bodyParser from 'body-parser';
-import path from 'path';
-import { fileURLToPath } from 'url';
-import { dirname } from 'path';
+const express = require ('express');
+const cors = require ('cors');
+const bodyParser = require ('body-parser');
+const path = require ('path');
+require('./config/db.config');
+
+const userRouter = require ('./routes/user.route');
 
 const app = express();
 
@@ -11,8 +12,8 @@ app.use(cors())
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+app.use(userRouter)
+
 app.use("/public", express.static(path.join(__dirname, "public")));
 app.use("/", (req, res) => {
     res.sendFile(__dirname + '/public/index.html');
