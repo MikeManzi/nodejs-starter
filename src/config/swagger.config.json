@@ -1,0 +1,28 @@
+{
+    "swaggerDefinition": {
+        "info": {
+            "title": "App Name API",
+            "description": "",
+            "version": "1.0.0",
+            "contact": {
+                "email": "manzimike378@gmail.com",
+                "name": "Mike"
+            },
+            "servers": [
+                "http://localhost:5000"
+            ]
+        },
+        "securityDefinitions": {
+            "bearerAuth": {
+                "type": "apiKey",
+                "name": "Authorization",
+                "scheme": "bearer",
+                "in": "header"
+            }
+        }
+    },
+    "apis": [
+        "./src/routes/*.js",
+        "./src/models/*.js"
+    ]
+}

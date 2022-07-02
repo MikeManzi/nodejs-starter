@@ -3,6 +3,26 @@ const bcrypt = require('bcrypt')
 const Joi = require('joi')
 const jwt = require('jsonwebtoken')
 
+/**
+ * @swagger
+ * definitions:
+ *   User:
+ *     properties:
+ *       firstName:
+ *         type: string
+ *       lastName:
+ *         type: string
+ *       email:
+ *         type: string
+ *       password:
+ *         type: string
+ *     required:
+ *       - firstName
+ *       - lastName
+ *       - email
+ *       - password
+ */
+
 const userSchema = new mongoose.Schema({
     firstName: {
         type: String,
@@ -20,10 +40,9 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true
     }
+}, {
+    timestamps: true
 }
-    , {
-        timestamps: true
-    }
 );
 
 userSchema.methods.toJSON = function () {

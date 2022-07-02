@@ -6,7 +6,7 @@ exports.login = async (req, res) => {
         if (error) return res.status(400).send(error.details[0].message);
         const user = await User.findByCredentials(req.body.email, req.body.password)
         const token = await user.generateAuthToken()
-        res.send({token})
+        res.send({user, token})
     } catch (error) {
         res.status(400).send(error.toString());
     }
